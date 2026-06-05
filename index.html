@@ -3,236 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5050 English Pricing</title>
+<title>Private Coaching</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
-    height:100vh;
-    overflow:hidden;
-    background:#eaf4ff;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-.container{
-    width:100%;
-    max-width:1400px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
+    background:#eef5ff;
     padding:20px;
 }
 
 .card{
-    width:360px;
-    height:700px;
+    width:100%;
+    max-width:400px;
     background:white;
-    border-radius:35px;
-    padding:35px;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.featured{
-    background:#7fa8f7;
-    color:white;
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .title{
-    font-size:2rem;
+    font-size:28px;
     font-weight:700;
-    margin-bottom:20px;
-}
-
-.price{
     margin-bottom:15px;
 }
 
-.price small{
+.price-label{
     color:#777;
+    font-size:14px;
 }
 
-.featured .price small{
-    color:#dce7ff;
-}
-
-.price span{
-    font-size:3rem;
+.price{
+    font-size:52px;
     font-weight:700;
+    line-height:1;
 }
 
-.divider{
-    height:2px;
-    background:#ddd;
-    margin:20px 0;
+.duration{
+    color:#666;
+    margin-bottom:20px;
 }
 
-.featured .divider{
-    background:rgba(255,255,255,.5);
+.toggle-btn{
+    width:100%;
+    border:none;
+    background:#f3f6fb;
+    padding:14px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    margin-bottom:15px;
 }
 
-ul{
+.details{
+    display:none;
+    margin-bottom:20px;
+}
+
+.details.active{
+    display:block;
+    animation:fade .25s ease;
+}
+
+.details ul{
     list-style:none;
-    flex:1;
 }
 
-li{
-    margin-bottom:18px;
-    line-height:1.4;
+.details li{
+    margin-bottom:12px;
+    line-height:1.5;
 }
 
-li::before{
+.details li::before{
     content:"✓ ";
-    color:#0db04b;
+    color:#15b84d;
     font-weight:bold;
 }
 
 .best{
     margin-top:15px;
-    font-size:1rem;
+    color:#555;
     line-height:1.5;
 }
 
 .pay-btn{
-    margin-top:30px;
+    display:block;
     text-decoration:none;
     text-align:center;
     background:#4f8cff;
     color:white;
     padding:16px;
     border-radius:12px;
-    font-size:1.1rem;
-    font-weight:bold;
-    transition:.3s;
+    font-weight:700;
+    font-size:16px;
 }
 
-.pay-btn:hover{
-    transform:translateY(-2px);
-}
-
-.featured .pay-btn{
-    background:white;
-    color:#4f8cff;
-}
-
-@media(max-width:1200px){
-    .card{
-        width:32%;
-        height:650px;
-        padding:25px;
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(-5px);
     }
-
-    .title{
-        font-size:1.7rem;
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
+
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="card">
 
-    <!-- Private Coaching -->
-    <div class="card">
-        <div class="title">Private Coaching</div>
+    <h2 class="title">Private Coaching</h2>
 
-        <div class="price">
-            <small>EGP</small>
-            <span>295</span>
-            /90 min
-        </div>
+    <div class="price-label">EGP</div>
 
-        <div style="color:#cc4444;font-weight:bold;">
-            Limited 3 spots
-        </div>
+    <div class="price">295</div>
 
-        <div class="divider"></div>
+    <div class="duration">90 Minutes</div>
+
+    <button class="toggle-btn" onclick="toggleDetails(this)">
+        View Details ▼
+    </button>
+
+    <div class="details">
 
         <ul>
             <li>Deep-dive into your specific weaknesses.</li>
-            <li>Customized practice for your career (Freelancing/CS).</li>
+
+            <li>Customized practice for your career
+                (Freelancing / CS).</li>
+
             <li>Intensive accent & vocabulary correction.</li>
-            <li>Flexible scheduling (Book when needed).</li>
+
+            <li>Flexible Scheduling
+                (Book when you need).</li>
         </ul>
 
-        <div class="best">
+        <p class="best">
             Best for professionals preparing for a specific interview or deadline.
-        </div>
+        </p>
 
-        <a class="pay-btn"
-           href="tel:*9*7*01027601877*295%23">
-            Pay 295 EGP
-        </a>
     </div>
 
-    <!-- Speaking Club -->
-    <div class="card featured">
-        <div class="title">Speaking Club</div>
-
-        <div class="price">
-            <small>EGP</small>
-            <span>95</span>
-            /120 min (group)
-        </div>
-
-        <div class="divider"></div>
-
-        <ul>
-            <li>Real practice: Speak, not just listen.</li>
-            <li>Interactive games and activities.</li>
-            <li>Real-life scenarios: interviews, freelancing, travel.</li>
-            <li>Instant feedback and corrections.</li>
-            <li>Practice assignments after session.</li>
-        </ul>
-
-        <div class="best">
-            Best for anyone who wants to speak confidently in real life.
-        </div>
-
-        <a class="pay-btn"
-           href="tel:*9*7*01027601877*95%23">
-            Pay 95 EGP
-        </a>
-    </div>
-
-    <!-- Clarity Session -->
-    <div class="card">
-        <div class="title">Clarity Session</div>
-
-        <div class="price">
-            <small>EGP</small>
-            <span>85</span>
-            /15 min
-        </div>
-
-        <div class="divider"></div>
-
-        <ul>
-            <li>Define your English learning goals.</li>
-            <li>Get a clear step-by-step roadmap.</li>
-            <li>Identify your current speaking level.</li>
-        </ul>
-
-        <div class="best">
-            Best for busy people who want a clear direction before committing.
-        </div>
-
-        <a class="pay-btn"
-           href="tel:*9*7*01027601877*85%23">
-            Pay 85 EGP
-        </a>
-    </div>
+    <a
+        class="pay-btn"
+        href="tel:*9*7*01027601877*295%23">
+        Reserve & Pay
+    </a>
 
 </div>
+
+<script>
+
+function toggleDetails(button){
+
+    const details =
+        button.nextElementSibling;
+
+    details.classList.toggle("active");
+
+    if(details.classList.contains("active")){
+        button.innerHTML =
+            "Hide Details ▲";
+    }
+    else{
+        button.innerHTML =
+            "View Details ▼";
+    }
+
+}
+
+</script>
 
 </body>
 </html>
