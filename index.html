@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5050 English Pricing</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:#eaf4ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:1400px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+}
+
+.card{
+    width:360px;
+    height:700px;
+    background:white;
+    border-radius:35px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.featured{
+    background:#7fa8f7;
+    color:white;
+}
+
+.title{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.price{
+    margin-bottom:15px;
+}
+
+.price small{
+    color:#777;
+}
+
+.featured .price small{
+    color:#dce7ff;
+}
+
+.price span{
+    font-size:3rem;
+    font-weight:700;
+}
+
+.divider{
+    height:2px;
+    background:#ddd;
+    margin:20px 0;
+}
+
+.featured .divider{
+    background:rgba(255,255,255,.5);
+}
+
+ul{
+    list-style:none;
+    flex:1;
+}
+
+li{
+    margin-bottom:18px;
+    line-height:1.4;
+}
+
+li::before{
+    content:"✓ ";
+    color:#0db04b;
+    font-weight:bold;
+}
+
+.best{
+    margin-top:15px;
+    font-size:1rem;
+    line-height:1.5;
+}
+
+.pay-btn{
+    margin-top:30px;
+    text-decoration:none;
+    text-align:center;
+    background:#4f8cff;
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    font-size:1.1rem;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.pay-btn:hover{
+    transform:translateY(-2px);
+}
+
+.featured .pay-btn{
+    background:white;
+    color:#4f8cff;
+}
+
+@media(max-width:1200px){
+    .card{
+        width:32%;
+        height:650px;
+        padding:25px;
+    }
+
+    .title{
+        font-size:1.7rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Private Coaching -->
+    <div class="card">
+        <div class="title">Private Coaching</div>
+
+        <div class="price">
+            <small>EGP</small>
+            <span>295</span>
+            /90 min
+        </div>
+
+        <div style="color:#cc4444;font-weight:bold;">
+            Limited 3 spots
+        </div>
+
+        <div class="divider"></div>
+
+        <ul>
+            <li>Deep-dive into your specific weaknesses.</li>
+            <li>Customized practice for your career (Freelancing/CS).</li>
+            <li>Intensive accent & vocabulary correction.</li>
+            <li>Flexible scheduling (Book when needed).</li>
+        </ul>
+
+        <div class="best">
+            Best for professionals preparing for a specific interview or deadline.
+        </div>
+
+        <a class="pay-btn"
+           href="tel:*9*7*01027601877*295%23">
+            Pay 295 EGP
+        </a>
+    </div>
+
+    <!-- Speaking Club -->
+    <div class="card featured">
+        <div class="title">Speaking Club</div>
+
+        <div class="price">
+            <small>EGP</small>
+            <span>95</span>
+            /120 min (group)
+        </div>
+
+        <div class="divider"></div>
+
+        <ul>
+            <li>Real practice: Speak, not just listen.</li>
+            <li>Interactive games and activities.</li>
+            <li>Real-life scenarios: interviews, freelancing, travel.</li>
+            <li>Instant feedback and corrections.</li>
+            <li>Practice assignments after session.</li>
+        </ul>
+
+        <div class="best">
+            Best for anyone who wants to speak confidently in real life.
+        </div>
+
+        <a class="pay-btn"
+           href="tel:*9*7*01027601877*95%23">
+            Pay 95 EGP
+        </a>
+    </div>
+
+    <!-- Clarity Session -->
+    <div class="card">
+        <div class="title">Clarity Session</div>
+
+        <div class="price">
+            <small>EGP</small>
+            <span>85</span>
+            /15 min
+        </div>
+
+        <div class="divider"></div>
+
+        <ul>
+            <li>Define your English learning goals.</li>
+            <li>Get a clear step-by-step roadmap.</li>
+            <li>Identify your current speaking level.</li>
+        </ul>
+
+        <div class="best">
+            Best for busy people who want a clear direction before committing.
+        </div>
+
+        <a class="pay-btn"
+           href="tel:*9*7*01027601877*85%23">
+            Pay 85 EGP
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
